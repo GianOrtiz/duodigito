@@ -1,0 +1,17 @@
+.result {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.result-value {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.elapsed-time {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: green;
+}

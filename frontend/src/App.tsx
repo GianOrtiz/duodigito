@@ -62,22 +62,35 @@ function App() {
 
   return (
     <div className="App">
-      <CalculusForm
-        num={num}
-        error={numError}
-        onChange={onChangeNum}
-        onSubmit={onSubmit}
-        loading={loading}
-      />
-      {result && (
-        <CalculusResult
-          elapsedTime={result.elapsedTimeMillis}
-          result={result.result}
+      <div className="calculus-container">
+        <header className="calculus-header">
+          <h2>Cálculo de menor múltiplo duodígito</h2>
+          <p>Esta ferramenta permite descobrir o menor múltiplo do número dado que é duodígito. Divirta-se!</p>
+        </header>
+        <div className="form-container">
+          <CalculusForm
+            num={num}
+            error={numError}
+            onChange={onChangeNum}
+            onSubmit={onSubmit}
+            loading={loading}
+          />
+        </div>
+        {result && (
+          <div className="result-container">
+            <h2>Resultado:</h2>
+            <CalculusResult
+              elapsedTime={result.elapsedTimeMillis}
+              result={result.result}
+            />
+          </div>
+        )}
+      </div>
+      <div className="history-container">
+        <History
+          values={history}
         />
-      )}
-      <History
-        values={history}
-      />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,46 @@
+.calculus-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.value-input, .value-input-error {
+    box-shadow: 0 0 4px gray;
+    border: 0;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin: 0.25rem;
+    min-width: 125px;
+    padding: 0.5rem;
+    transition: background-color 0.5s ease-out;
+}
+
+.value-input:focus, .value-input-error:focus {
+    outline: none;
+    box-shadow: 0 0 8px gray;
+}
+
+.value-input-error {
+    border: 2px red solid;
+}
+
+.input-error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+.button-form {
+    background-color: lightblue;
+    border: none;
+    margin-top: 8%;
+    font-size: 1rem;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 16px;
+}
+
+.button-form:hover {
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 export interface Props {
     onSubmit: (event: React.FormEvent) => void;
@@ -12,14 +13,20 @@ const CalculusForm = (props: Props): JSX.Element => {
     const { onSubmit, num, onChange, loading, error } = props;
 
     return (
-        <form onSubmit={onSubmit}>
-            <input type="number" value={num} onChange={onChange} />
-            {error && <div>{error}</div>}
+        <form onSubmit={onSubmit} className="calculus-form">
+            <input
+                type="number"
+                value={num}
+                onChange={onChange}
+                className={error ? "value-input-error" : "value-input"}
+            />
+            {error && <div className="input-error">{error}</div>}
             <button
-            type="submit"
-            disabled={loading}
+                type="submit"
+                disabled={loading}
+                className="button-form"
             >
-            {loading ? 'Carregando' : 'Calcular'}
+                {loading ? 'Carregando' : 'Calcular'}
             </button>
         </form>
     );

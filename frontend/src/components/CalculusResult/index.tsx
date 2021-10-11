@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 export interface Props {
     elapsedTime: number;
@@ -9,9 +10,13 @@ const CalculusResult = (props: Props): JSX.Element => {
     const { elapsedTime, result } = props;
 
     return (
-        <div>
-            <p>Tempo decorrido: {elapsedTime}ms</p>
-            <p>Resultado: {result}</p>
+        <div className="result">
+            <span className="result-value">
+                {result}
+            </span>
+            <span className="elapsed-time">
+                Tempo decorrido: {elapsedTime}ms
+            </span>
         </div>
     );
 };
