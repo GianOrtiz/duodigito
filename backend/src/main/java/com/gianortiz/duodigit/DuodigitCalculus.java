@@ -1,7 +1,8 @@
 package com.gianortiz.duodigit;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Arrays;
+import java.util.List;
+import java.util.HashSet;
 
 public class DuodigitCalculus {
     private final long input;
@@ -42,15 +43,11 @@ public class DuodigitCalculus {
      * @return The result from the verification.
      */
     private boolean isDuodigit(long number) {
-        String numberStr = Long.toString(number);
-        Map<Character, Integer> characters = new HashMap<Character, Integer>();
-        for (int i = 0; i < numberStr.length(); i++) {
-            char c = numberStr.charAt(i);
-            if (!characters.containsKey(c)) {
-                characters.put(c, 0);
-            }
-        }
-        return characters.size() <= 2 && characters.size() > 0;
+        List<String> numberCharacters = 
+            Arrays.asList(Long.toString(number).split(""));
+        HashSet<String> uniqueCharacters =
+            new HashSet<String>(numberCharacters);
+        return uniqueCharacters.size() <= 2 && uniqueCharacters.size() > 0;
     }
 
     public long getInput() {
