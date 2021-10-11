@@ -20,3 +20,5 @@ Desta forma, como requisitos para executar a aplicação temos:
 ### Localmente
 
 Para executar o projeto localmente, precisaremos de dois terminais. No primeiro acessamos o diretório `backend` e executamos o comando `./gradlew bootRun`, isto irá iniciar um novo webserver na porta `8080` e podemos acessar/testar isso utilizando o comando `curl http://localhost:8080/duodigit?number=123` que nos retornará uma resposta. Agora, devemos executar a parte responsável pelo frontend, basta acessar o diretório `frontend` no outro terminal, e executar o comando `yarn start`, ou `npm start` se estiver utilizanod `npm`, um navegador deve abrir e o frontend deve ser acessível pelo endereço `http://localhost:3000`.
+
+Também é possível utilizar o script que executa os dois processos juntos, `./scripts/run.sh`.
