@@ -14,8 +14,10 @@ const CalculusForm = (props: Props): JSX.Element => {
 
     return (
         <form onSubmit={onSubmit} className="calculus-form">
+            <label htmlFor="number">Valor</label>
             <input
                 type="number"
+                name="number"
                 value={num}
                 onChange={onChange}
                 className={error ? "value-input-error" : "value-input"}
@@ -25,6 +27,7 @@ const CalculusForm = (props: Props): JSX.Element => {
                 type="submit"
                 disabled={loading}
                 className="button-form"
+                aria-describedby="Realiza o cálculo"        
             >
                 {loading ? 'Carregando' : 'Calcular'}
             </button>

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Cálculo Duodígito",
+  "name": "Calcula o menor múltiplo de um número que é duodígito",
   "icons": [
     {
       "src": "favicon.ico",
