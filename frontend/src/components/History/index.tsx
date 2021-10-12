@@ -16,7 +16,7 @@ const History = (props: Props): JSX.Element => {
                 (value, index) =>
                     <div
                         className="history-entry"
-                        id={index.toString()}
+                        key={index.toString()}
                     >
                         <div className="input-history">{value.input}</div>
                         <div
