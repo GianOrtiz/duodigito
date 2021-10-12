@@ -1,6 +1,8 @@
 import { DuodigitResult } from "./duodigitResult";
 
-const url = 'http://localhost:8080'
+const url = process.env.NODE_ENV === "development"
+    ? 'http://localhost:8080'
+    : 'https://murmuring-tundra-64612.herokuapp.com';
 
 const fetchDuodigit = async (num: number): Promise<DuodigitResult | undefined> => {
     const res = await fetch(`${url}/duodigit?number=${num}`);
